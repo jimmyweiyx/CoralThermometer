@@ -1,0 +1,16 @@
+Before you commence training, ensure that you are using the same version of scikit-learn, numpy, pandas, 
+and other Python packages as indicated in python-pack-version. Also, confirm that the Python environment 
+with the matching version of python-pack-version is exported to the environment.
+
+1. Prepare your training data:
+    The template for the training file has been placed in ./dataTrain/data01.xlsx.
+2. Move the training data to the input directory:
+    mv path_to_train_file mv $(path_to_model)/dataTrain
+3. run models
+    3.1, If you want to quickly training all non-linear models
+        export WorkDir=/path/to/souce/code/dir
+        bash $(WorkDir)/run.sh
+    3.2 If you want to train a single model or another self-defined model (taking svr as an example):
+        export WorkDir=/path/to/souce/code/dir
+        cd $(WorkDir)/model
+        python svr.py
